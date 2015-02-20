@@ -11,11 +11,10 @@ public class Main {
 	 */
 	public static void main(String[] args){
 		
-		Student_Info student = new Student_Info();
+		Usuario student = new Usuario();
 		
-		student.setName("Andre3");
-		student.setRollNo(3);
-		
+		student.setNombre("Andre3");
+				
 		SessionFactory sessionFactory = new AnnotationConfiguration().configure().buildSessionFactory();
 		Session session = sessionFactory.openSession();
 		session.beginTransaction();

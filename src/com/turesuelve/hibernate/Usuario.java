@@ -12,6 +12,7 @@ public class Usuario {
 	private String correo_electronico_usuario;
 	private Float dinero_promocion;
 	private Set<TarjetaCredito> tarjetas = new HashSet<TarjetaCredito>();
+	private Set<Ciudad> ciudades = new HashSet<Ciudad>();
 	
 	public String getNombre_usuario() {
 		return nombre_usuario;
@@ -54,6 +55,12 @@ public class Usuario {
 	}
 	public void setTarjetas(Set<TarjetaCredito> tarjetas) {
 		this.tarjetas = tarjetas;
+	} 
+	public Set<Ciudad> getCiudades() {
+		return ciudades;
+	}
+	public void setCiudades(Set<Ciudad> ciudades) {
+		this.ciudades = ciudades;
 	} 
 	
 	
