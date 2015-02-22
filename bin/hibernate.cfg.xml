@@ -42,6 +42,9 @@
    <!-- <mapping class="com.turesuelve.hibernate.Student_Info"/>-->
    <mapping resource="resources/org/hibernate/turesuelve/com/Usuario.hbm.xml"/>
    <mapping resource="resources/org/hibernate/turesuelve/com/TarjetaCredito.hbm.xml"/>
-
+   <mapping resource="resources/org/hibernate/turesuelve/com/Ciudad.hbm.xml"/>
+   <mapping resource="resources/org/hibernate/turesuelve/com/Promocion.hbm.xml"/>
+   
+   
 </session-factory>
 </hibernate-configuration>

@@ -1,14 +1,22 @@
 package org.hibernate.turesuelve.domain;
 
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Ciudad {
+public class Ciudad implements Serializable{
 	
 	private String nombre_ciudad;
 	private String nombre_pais;
 	private Set<Usuario> usuarios = new HashSet<Usuario>();
 	private Set<Promocion> promociones = new HashSet<Promocion>();
+	
+	public Ciudad(){}
+	
+	public Ciudad(String ciudad, String pais){
+		this.nombre_ciudad = ciudad;
+		this.nombre_pais = pais;
+	}
 	
 	public String getNombre_ciudad() {
 		return nombre_ciudad;

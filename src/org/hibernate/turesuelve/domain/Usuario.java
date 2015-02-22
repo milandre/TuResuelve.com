@@ -14,6 +14,8 @@ public class Usuario {
 	private Set<String> redes_sociales = new HashSet<String>();
 	private Set<TarjetaCredito> tarjetas = new HashSet<TarjetaCredito>();
 	private Set<Ciudad> ciudades = new HashSet<Ciudad>();
+	private Set<Usuario> principales = new HashSet<Usuario>();
+    private Set<Usuario> amigos = new HashSet<Usuario>();
 	
 	public Usuario(){}	
 	
@@ -85,6 +87,22 @@ public class Usuario {
 	public void addRedSocial(String red){
 		
 		this.redes_sociales.add(red);
+	}
+
+	public Set<Usuario> getPrincipales() {
+		return principales;
+	}
+
+	public void setPrincipales(Set<Usuario> principales) {
+		this.principales = principales;
+	}
+
+	public Set<Usuario> getAmigos() {
+		return amigos;
+	}
+
+	public void setAmigos(Set<Usuario> amigos) {
+		this.amigos = amigos;
 	}
 	
 }

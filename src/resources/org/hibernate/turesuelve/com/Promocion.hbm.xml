@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping package="org.hibernate.turesuelve.domain">
+ 
+    <class name="Promocion" table="PROMOCION">
+        
+        <composite-id>
+            <key-property name="descripcion" column="DESCRIPCION" type="string" /> 
+            <key-property name="fecha_inicio_vigencia" column="FECHA_INICIO_VIGENCIA" type="date" /> 
+            <key-property name="fecha_fin_vigencia" column="FECHA_FIN_VIGENCIA" type="date" />
+        </composite-id>
+		
+		<property name="monto_original" column="MONTO_ORIGINAL" not-null="true" type="float"/>
+		<property name="monto_oferta" column="MONTO_OFERTA" not-null="true" type="float"/>
+		<property name="tipo" column="TIPO" not-null="true"/>
+		<property name="es_continuo" column="ES_CONTINUO" not-null="true" type="boolean"/>
+       		
+ 		 <set name="ciudades_ofertadas" table="CIUDAD_PROMOCION" inverse="true" lazy="true" fetch="select" cascade="all">
+          	<key>
+              <column name="DESCRIPCION" not-null="true"/>
+              <column name="FECHA_INICIO_VIGENCIA" not-null="true"/>
+              <column name="FECHA_FIN_VIGENCIA" not-null="true"/>
+           	</key>
+           <many-to-many class="org.hibernate.turesuelve.domain.Ciudad">
+              <column name="NOMBRE_CIUDAD"></column>
+               <column name="NOMBRE_PAIS"></column>
+           </many-to-many>
+        </set>
+ 		
+ 	</class>
+ 	
+</hibernate-mapping>
