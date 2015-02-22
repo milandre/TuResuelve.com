@@ -13,7 +13,7 @@
 
    <!-- Assume test is the database name -->
    <property name="hibernate.connection.url">
-      jdbc:mysql://localhost:3306/hibernateTutorial
+      jdbc:mysql://localhost:3306/turesuelve
    </property>
    <property name="hibernate.connection.username">
       root
@@ -21,6 +21,9 @@
    <property name="hibernate.connection.password">
       
    </property>
+   
+   <!-- Enable Hibernate's automatic session context management -->
+    <property name="current_session_context_class">thread</property>
    
    <!-- JDBC connection pool (use the built-in) -->
 	<property name="connection.pool_size">1</property>
@@ -32,11 +35,13 @@
 	<property name="show_sql">true</property>
 	
 	<!-- Drop and re-create the database schema on startup -->
-	<property name="hbm2ddl.auto">create-drop</property>
+	<property name="hbm2ddl.auto">create</property>
 	
 	
    <!-- List of XML mapping files -->
-   <mapping class="com.turesuelve.hibernate.Student_Info"/>
+   <!-- <mapping class="com.turesuelve.hibernate.Student_Info"/>-->
+   <mapping resource="resources/org/hibernate/turesuelve/com/Usuario.hbm.xml"/>
+   <mapping resource="resources/org/hibernate/turesuelve/com/TarjetaCredito.hbm.xml"/>
 
 </session-factory>
 </hibernate-configuration>

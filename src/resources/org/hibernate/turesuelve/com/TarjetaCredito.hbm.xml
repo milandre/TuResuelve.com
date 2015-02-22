@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="org.hibernate.turesuelve.domain">
+ 
+    <class name="TarjetaCredito" table="TARJETA_CREDITO">
+ 
+        <id name="numero_tarjeta" column="TARJETA_ID">
+        </id>
+ 
+        <property name="id_titular" not-null="true" column="ID_TITULAR"/>
+        <property name="nombre_titular" not-null="true" column="NOMBRE_TITULAR"/>
+        <property name="tipo_tarjeta" not-null="true" column="TIPO_TARJETA"/>
+	    <property name="codigo_validacion" not-null="true" column="CODIGO_VALIDACION"/>
+	    <property name="fecha_vencimiento" not-null="true" type="date" column="FECHA_VENCIMIENTO"/>
+	
+        <set name="usuarios" table="USUARIO_TARJETA" inverse="true" lazy="true" fetch="select"> 
+         <key>
+            <column name="TARJETA_ID" not-null="true"/>
+         </key>
+            <many-to-many column="USUARIO_ID" class="org.hibernate.turesuelve.domain.Usuario"></many-to-many>
+        </set>
+    </class>
+  
+</hibernate-mapping>

@@ -1,0 +1,40 @@
+package org.hibernate.turesuelve.domain;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class Ciudad {
+	
+	private String nombre_ciudad;
+	private String nombre_pais;
+	private Set<Usuario> usuarios = new HashSet<Usuario>();
+	private Set<Promocion> promociones = new HashSet<Promocion>();
+	
+	public String getNombre_ciudad() {
+		return nombre_ciudad;
+	}
+	public void setNombre_ciudad(String nombre_ciudad) {
+		this.nombre_ciudad = nombre_ciudad;
+	}
+	public String getNombre_pais() {
+		return nombre_pais;
+	}
+	public void setNombre_pais(String nombre_pais) {
+		this.nombre_pais = nombre_pais;
+	}
+	public Set<Usuario> getUsuarios() {
+		return usuarios;
+	}
+	public void setUsuarios(Set<Usuario> usuarios) {
+		this.usuarios = usuarios;
+	}
+	public Set<Promocion> getPromociones() {
+		return promociones;
+	}
+	public void setPromociones(Set<Promocion> promociones) {
+		this.promociones = promociones;
+	}
+	
+	
+	
+}

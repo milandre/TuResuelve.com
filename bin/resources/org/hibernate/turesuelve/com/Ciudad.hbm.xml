@@ -1,0 +1,21 @@
+<hibernate-mapping package="org.hibernate.turesuelve.domain">
+ 
+    <class name="Ciudad" table="CIUDAD">
+        
+        <composite-id>
+            <key-property name="nombre_ciudad" column="NOMBRE_CIUDAD" type="string" /> 
+            <key-property name="nombre_pais" column="NOMBRE_PAIS" type="string" /> 
+		</composite-id>
+                      
+ 		<set name="usuarios" table="USUARIO_CIUDAD" inverse="true" lazy="true" fetch="select" cascade="all">
+           <!--<key-many-to-many name="CIUDAD_PAIS">
+              <column name="NOMBRE_CIUDAD" not-null="true"/>
+              <column name="NOMBRE_PAIS" not-null="true"/>
+           </key-many-to-many>-->
+           <key><column name="NOMBRE_CIUDAD" not-null="true"></key>
+           <many-to-many column="USUARIO_ID" class="org.hibernate.turesuelve.domain.Usuario"></many-to-many>
+        </set>
+ 		
+ 	</class>
+ 	
+</hibernate-mapping>

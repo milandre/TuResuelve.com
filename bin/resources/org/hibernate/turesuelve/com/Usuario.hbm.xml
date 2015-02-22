@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="org.hibernate.turesuelve.domain">
+ 
+    <class name="Usuario" table="USUARIO">
+        <id name="nombre_usuario" column="USUARIO_ID">
+        </id>
+        
+        <property name="clave" not-null="true" column="CLAVE"/>
+        <property name="nombre" not-null="true" column="NOMBRE"/>
+        <property name="apellido" not-null="true" column="APELLIDO"/>
+ 		<property name="correo_electronico_usuario" not-null="true" column="CORREO"/>
+ 		<property name="dinero_promocion">
+ 		   <column name="DINERO_PROMOCION" default="0.0" />
+        </property>
+              
+ 		<!-- Cascade is a convenient feature to save the lines of 
+ 		code needed to manage the state of the other side manually.
+ 		The “Cascade” keyword is often appear on the collection mapping to manage 
+ 		the state of the collection automatically. In this tutorials, -->
+ 		
+ 		<!-- Con inverse=false indico que la clase propietaria no es meeting -->
+ 		<set name="tarjetas" table="USUARIO_TARJETA" inverse="false" lazy="true" fetch="select" cascade="all">
+           <key>
+              <column name="USUARIO_ID" not-null="true"/>
+           </key>
+           <many-to-many column="TARJETA_ID" class="org.hibernate.turesuelve.domain.TarjetaCredito"></many-to-many>
+        </set>
+        
+ 		<set name="ciudades" table="USUARIO_CIUDAD" inverse="false" lazy="true" fetch="select" cascade="all">
+           <key>
+              <column name="USUARIO_ID" not-null="true"/>
+           </key>
+           <many-to-many column="NOMBRE_CIUDAD" class="org.hibernate.turesuelve.domain.Ciudad"></many-to-many>
+        </set>
+ 		
+ 		
+ 		
+ 	 </class>
+ 	
+</hibernate-mapping>
