@@ -1,15 +1,28 @@
 package org.hibernate.turesuelve.domain;
 
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Empresa {
+@SuppressWarnings("serial")
+public class Empresa implements Serializable {
 	
 	private String nombre_empresa;
 	private String telefono;
 	private String direccion;
 	private Integer nro_estimado_clientes;
 	private Set<Promocion> promociones_lanzadas = new HashSet<Promocion>();
+	private Set<CategoriaGeneral> categorias_generales = new HashSet<CategoriaGeneral>();
+	
+	public Empresa(){}
+	
+	public Empresa(String nombre, String telf, String dir, Integer nro_cliente){
+		
+		this.nombre_empresa = nombre;
+		this.telefono = telf;
+		this.direccion = dir;
+		this.nro_estimado_clientes = nro_cliente;
+	}
 	
 	public String getNombre_empresa() {
 		return nombre_empresa;
@@ -40,6 +53,12 @@ public class Empresa {
 	}
 	public void setPromociones_lanzadas(Set<Promocion> promociones_lanzadas) {
 		this.promociones_lanzadas = promociones_lanzadas;
+	}
+	public Set<CategoriaGeneral> getCategorias_generales() {
+		return categorias_generales;
+	}
+	public void setCategorias_generales(Set<CategoriaGeneral> categorias_generales) {
+		this.categorias_generales = categorias_generales;
 	}
 		
 	

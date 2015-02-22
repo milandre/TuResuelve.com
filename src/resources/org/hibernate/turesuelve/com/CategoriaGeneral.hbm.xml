@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="org.hibernate.turesuelve.domain">
+ 
+    <class name="CategoriaGeneral" table="CATEGORIA_GENERAL">
+        <id name="nombre_categoria" column="CATEGORIA_ID">
+        </id>
+        
+ 		<!-- Con inverse=false indico que la clase propietaria no es Usuario -->
+ 		<set name="usuarios" table="USUARIO_CATEGORIA" inverse="true" lazy="true" fetch="select" cascade="all">
+           <key>
+              <column name="CATEGORIA_ID" not-null="true"/>
+           </key>
+           <many-to-many column="USUARIO_ID" class="org.hibernate.turesuelve.domain.Usuario"></many-to-many>
+        </set>
+        
+ 		<!-- Con inverse=false indico que la clase propietaria no es Empresa -->
+ 		<set name="empresas" table="EMPRESA_CATEGORIA" inverse="true" lazy="true" fetch="select" cascade="all">
+           <key>
+              <column name="CATEGORIA_ID" not-null="true"/>
+           </key>
+           <many-to-many class="org.hibernate.turesuelve.domain.Empresa">
+               <column name="NOMBRE_EMPRESA"></column>
+               <column name="TELEFONO"></column>
+           </many-to-many>
+        </set>
+ 		
+ 	</class>
+ 	
+</hibernate-mapping>

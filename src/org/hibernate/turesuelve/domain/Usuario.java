@@ -16,6 +16,7 @@ public class Usuario {
 	private Set<Ciudad> ciudades = new HashSet<Ciudad>();
 	private Set<Usuario> principales = new HashSet<Usuario>();
     private Set<Usuario> amigos = new HashSet<Usuario>();
+    private Set<CategoriaGeneral> categorias = new HashSet<CategoriaGeneral>();
 	
 	public Usuario(){}	
 	
@@ -103,6 +104,14 @@ public class Usuario {
 
 	public void setAmigos(Set<Usuario> amigos) {
 		this.amigos = amigos;
+	}
+
+	public Set<CategoriaGeneral> getCategorias() {
+		return categorias;
+	}
+
+	public void setCategorias(Set<CategoriaGeneral> categorias) {
+		this.categorias = categorias;
 	}
 	
 }

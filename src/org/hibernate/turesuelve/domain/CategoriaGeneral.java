@@ -9,6 +9,13 @@ public class CategoriaGeneral {
 	private Set<Empresa> empresas = new HashSet<Empresa>();
 	private Set<Usuario> usuarios = new HashSet<Usuario>();
 	
+	public CategoriaGeneral(){}
+	
+	public CategoriaGeneral(String nombre){
+		
+		this.nombre_categoria = nombre;
+	}
+		
 	public String getNombre_categoria() {
 		return nombre_categoria;
 	}

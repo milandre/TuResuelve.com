@@ -32,9 +32,15 @@ public class Main {
 	    TarjetaCredito tarjeta1 = new TarjetaCredito("50284726345","19932833","Andreina","Visa","300", sqlDate);
 	    TarjetaCredito tarjeta2 = new TarjetaCredito("37463854984","19932831","Fran","Visa","345", sqlDate);
 	    
+	    session.save(tarjeta1);
+	    session.save(tarjeta2);
+	    
 	    //Dos ciudades de paises distintos
 	    Ciudad ciudad1 = new Ciudad("Barcelona","Espana");
 	    Ciudad ciudad2 = new Ciudad("Barcelona","Venezuela");
+	    
+	    session.save(ciudad1);
+	    session.save(ciudad2);
 			    
 		//Empleado 1 con dos meetings
 		usuario1.getTarjetas().add(tarjeta1);
@@ -51,11 +57,12 @@ public class Main {
         
         //Conjunto de ciudades
         Set<Ciudad> ciudades = new HashSet<Ciudad>();
+        
+        ciudades.add(ciudad1);
+        ciudades.add(ciudad2);
+        
         usuario1.setCiudades(ciudades);
-        
-        
-        
-        
+                
 			    
 		session.save(usuario1);
 		session.save(usuario2);

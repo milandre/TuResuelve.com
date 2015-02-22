@@ -5,6 +5,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.Date;
 
+@SuppressWarnings("serial")
 public class Promocion implements Serializable{
 	
 	private String descripcion;

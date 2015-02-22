@@ -44,7 +44,8 @@
    <mapping resource="resources/org/hibernate/turesuelve/com/TarjetaCredito.hbm.xml"/>
    <mapping resource="resources/org/hibernate/turesuelve/com/Ciudad.hbm.xml"/>
    <mapping resource="resources/org/hibernate/turesuelve/com/Promocion.hbm.xml"/>
-   
+   <mapping resource="resources/org/hibernate/turesuelve/com/CategoriaGeneral.hbm.xml"/>
+   <mapping resource="resources/org/hibernate/turesuelve/com/Empresa.hbm.xml"/>
    
 </session-factory>
 </hibernate-configuration>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="org.hibernate.turesuelve.domain">
+ 
+    <class name="Empresa" table="EMPRESA">
+        
+        <composite-id>
+            <key-property name="nombre_empresa" column="NOMBRE_EMPRESA" type="string" /> 
+            <key-property name="telefono" column="TELEFONO" type="string" /> 
+		</composite-id>
+        
+        <property name="direccion" not-null="true" column="DIRECCION"/>
+        <property name="nro_estimado_clientes" type="integer" not-null="true" column="NRO_CLIENTES"/>
+              
+   		<!-- private Set<CategoriaGeneral> categorias_generales = new HashSet<CategoriaGeneral>();-->
+        
+        
+ 		<!-- Con inverse=false indico que la clase propietaria no es CategoriaGeneral -->
+ 		<set name="categorias_generales" table="EMPRESA_CATEGORIA" inverse="false" lazy="true" fetch="select" cascade="all">
+           <key>
+              <column name="NOMBRE_EMPRESA" not-null="true"/>
+              <column name="TELEFONO" not-null="true"/>
+           </key>
+           <many-to-many column="CATEGORIA_ID" class="org.hibernate.turesuelve.domain.CategoriaGeneral"></many-to-many>
+        </set>
+        
+ 		
+ 	</class>
+ 	
+</hibernate-mapping>

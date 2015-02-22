@@ -51,15 +51,22 @@
 	      <many-to-many column="USUARIO_ID" class="org.hibernate.turesuelve.domain.Usuario" />
 	    </set> 
  		
-	    <!-- <map name="COMPARTE">
+	    <set name="categorias" table="USUARIO_CATEGORIA" inverse="false" lazy="true" fetch="select" cascade="all">
+	     	<key>
+              <column name="USUARIO_ID" not-null="true"/>
+           </key>
+           <many-to-many column="CATEGORIA_ID" class="org.hibernate.turesuelve.domain.CategoriaGeneral">
+           </many-to-many>
+	    </set> 
+	    
+	    
+	     <!-- <map name="COMPARTE">
     		<key column="USUARIO_ID"/>
-    		<map-key-many-to-many column="USUARIO_ID" class="org.hibernate.turesuelve.domain.Usuario"/>
-    		<many-to-many class="org.hibernate.turesuelve.domain.Promocion">
-    		    <column name="DESCRIPCION"></column>
-    		    <column name="FECHA_INICIO_VIGENCIA"></column> 
-    		    <column name="FECHA_FIN_VIGENCIA"></column> 
-    		    
-    		</many-to-many>
+    		<map-key-many-to-many name ="DESCRIPCION" class="org.hibernate.turesuelve.domain.Promocion">
+    		</map-key-many-to-many>
+    		
+    		<many-to-many name="USUARIO_ID" class="org.hibernate.turesuelve.domain.Usuario">
+     		</many-to-many>
 		</map>-->
 	    
 	    
