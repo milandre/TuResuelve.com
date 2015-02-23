@@ -138,13 +138,13 @@ public class Main {
         }
 		
 		
-//		// Ciudades con mas promociones
-//		Query query3 = session.createQuery("select ciud.nombre_ciudad, ciud.nombre_pais, ciud.usuarios, ciud.promociones from Ciudad as ciud join ciud.promociones as proms order by (count(proms))");
-//		List<Ciudad> ciudad_imp = query3.list();
-//		
-//		for(Ciudad ciudad : ciudad_imp) {
-//            System.out.println(ciudad.getNombre_ciudad() + "," + ciudad.getNombre_pais());
-//        }
+		// Ciudad con mas promociones
+		Query query3 = session.createQuery("select ciud from Ciudad ciud join ciud.promociones proms order by count(proms) desc");
+		List<Ciudad> ciudad_imp = query3.list();
+		
+		for(Ciudad ciudad : ciudad_imp) {
+            System.out.println(ciudad.getNombre_ciudad() + "," + ciudad.getNombre_pais());
+        }
 		
 		session.getTransaction().commit();
 		session.close(); //En create-drop mode, esto permite crear el esquema.
