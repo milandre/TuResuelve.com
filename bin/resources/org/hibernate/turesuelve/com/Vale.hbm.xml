@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="org.hibernate.turesuelve.domain">
+ 
+    <class name="Vale" table="VALE">
+    
+        <id name="codigo_vale" column="CODIGO_VALE">
+        </id>
+ 
+        <property name="info_promocion" not-null="true" column="INFO_PROMOCION"/>
+        <property name="correo_electronico_vale" not-null="true" column="CORREO"/>
+        <property name="fecha_envio" type="date" not-null="true" column="FECHA_ENVIO"/>
+        <property name="fecha_compra" type="date" not-null="true" column="FECHA_COMPRA"/>
+ 
+        <many-to-one name="tarjeta_credito" class="org.hibernate.turesuelve.domain.TarjetaCredito" fetch="select">
+            <column name="TARJETA_ID" not-null="true">
+        	</column>
+        </many-to-one>
+        
+   <!--     
+        <many-to-one name="compra_perteneciente" class="org.hibernate.turesuelve.domain.Compra" fetch="select">
+              <column name="USUARIO_ID"></column>
+              <column name="DESCRIPCION"></column>
+              <column name="FECHA_INICIO_VEGENCIA"></column>
+              <column name="FECHA_FIN_VIGENCIA"></column>
+        </many-to-one>
+   -->
+   
+   </class>
+</hibernate-mapping>

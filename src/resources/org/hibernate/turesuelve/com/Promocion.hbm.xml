@@ -31,6 +31,21 @@
            </many-to-many>
         </set>
  		
+ 		<!-- <many-to-one name="subcategoria" class="org.hibernate.tutorial.domain.Subcategoria" fetch="select">
+            <column name="ID_PADRE_SUB" not-null="true">
+        	</column>
+        </many-to-one>-->
+ 		 
+ 		<set name="compradores" table="COMPRA" inverse="false" lazy="true" fetch="select" cascade="all">
+            <key>
+              <column name="DESCRIPCION" not-null="true"/>
+              <column name="FECHA_INICIO_VIGENCIA" not-null="true"/>
+              <column name="FECHA_FIN_VIGENCIA" not-null="true"/>
+            </key>
+              <many-to-many column="USUARIO_ID" class="org.hibernate.turesuelve.domain.Usuario">
+              </many-to-many>
+         </set>
+ 		 
  	</class>
  	
 </hibernate-mapping>

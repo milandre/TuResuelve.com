@@ -14,6 +14,7 @@ public class TarjetaCredito {
 	private String codigo_validacion;
 	private Date fecha_vencimiento;
 	private Set<Usuario> usuarios = new HashSet<Usuario>();
+	private Set<Vale> vales_comprados = new HashSet<Vale>();
 	
 	public TarjetaCredito(){}
 	
@@ -76,5 +77,11 @@ public class TarjetaCredito {
 		this.usuarios = usuarios;
 	}
 		
-	
+	public Set<Vale> getVales_comprados() {
+		return vales_comprados;
+	}
+
+	public void setVales_comprados(Set<Vale> vales_comprados) {
+		this.vales_comprados = vales_comprados;
+	}
 }

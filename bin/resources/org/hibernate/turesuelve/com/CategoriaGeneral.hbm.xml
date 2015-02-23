@@ -27,6 +27,33 @@
                <column name="TELEFONO"></column>
            </many-to-many>
         </set>
+        
+ 		 <joined-subclass name="Subcategoria" table="SUBCATEGORIA">
+        		
+        		<key column="ID_PADRE_SUB"/>
+        		
+        		<!-- <set name="promociones" table="PROMOCION" inverse="true" lazy="true" fetch="select">
+            		<key>
+                		<column name="ID_PADRE_SUB" not-null="true"/>
+            		</key>
+            		<one-to-many class="org.hibernate.tutorial.domain.Promocion"> 
+            		</one-to-many>
+        		</set>-->
+ 
+   		  </joined-subclass>
+   		  
+ 		  <joined-subclass name="Categoria" table="CATEGORIA">
+        		
+        		<key column="ID_PADRE_CAT"/>
+        		
+        		<set name = "subcategorias" lazy= "true" table= "SUBCATEGORIA">
+ 						<key><column name ="ID_PADRE_CAT" not-null="true"></column></key>
+ 						<composite-element class="Subcategoria">
+ 							<property name="nombre_categoria" column="ID_PADRE_SUB" not-null="true" />
+  						</composite-element>
+				</set>
+				
+   		  </joined-subclass>
  		
  	</class>
  	

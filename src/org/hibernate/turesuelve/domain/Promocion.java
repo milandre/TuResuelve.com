@@ -18,6 +18,9 @@ public class Promocion implements Serializable{
 	private Boolean es_continuo;
 	//private Set<Date> fechas_canje = new Set<Date>();
 	private Set<Ciudad> ciudades_ofertadas = new HashSet<Ciudad>();
+	private Subcategoria subcategoria;
+	private Set<Usuario> compradores = new HashSet<Usuario>();
+	
 	
 	public Promocion(){}
 	
@@ -97,7 +100,21 @@ public class Promocion implements Serializable{
 	public void setCiudades_ofertadas(Set<Ciudad> ciudades_ofertadas) {
 		this.ciudades_ofertadas = ciudades_ofertadas;
 	}
-		
+
+	public Subcategoria getSubcategoria() {
+		return subcategoria;
+	}
+
+	public void setSubcategoria(Subcategoria subcategoria) {
+		this.subcategoria = subcategoria;
+	}
 	
-	
+	public Set<Usuario> getCompradores() {
+		return compradores;
+	}
+
+	public void setCompradores(Set<Usuario> compradores) {
+		this.compradores = compradores;
+	}
+
 }

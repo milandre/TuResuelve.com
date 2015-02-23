@@ -22,6 +22,13 @@
          </key>
             <many-to-many column="USUARIO_ID" class="org.hibernate.turesuelve.domain.Usuario"></many-to-many>
         </set>
+        
+        <set name="vales_comprados" table="Vale" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="TARJETA_ID" not-null="true"/>
+            </key>
+            <one-to-many class="org.hibernate.turesuelve.domain.Vale"></one-to-many>
+        </set>
     </class>
   
 </hibernate-mapping>

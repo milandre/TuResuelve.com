@@ -46,6 +46,7 @@
    <mapping resource="resources/org/hibernate/turesuelve/com/Promocion.hbm.xml"/>
    <mapping resource="resources/org/hibernate/turesuelve/com/CategoriaGeneral.hbm.xml"/>
    <mapping resource="resources/org/hibernate/turesuelve/com/Empresa.hbm.xml"/>
+   <mapping resource="resources/org/hibernate/turesuelve/com/Vale.hbm.xml"/>
    
 </session-factory>
 </hibernate-configuration>
