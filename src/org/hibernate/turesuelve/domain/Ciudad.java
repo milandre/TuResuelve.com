@@ -10,7 +10,7 @@ public class Ciudad implements Serializable{
 	private String nombre_ciudad;
 	private String nombre_pais;
 	private Set<Usuario> usuarios = new HashSet<Usuario>();
-	private Set<Promocion> promociones = new HashSet<Promocion>();
+	private Set<Oferta> promociones = new HashSet<Oferta>();
 	
 	public Ciudad(){}
 	
@@ -37,10 +37,10 @@ public class Ciudad implements Serializable{
 	public void setUsuarios(Set<Usuario> usuarios) {
 		this.usuarios = usuarios;
 	}
-	public Set<Promocion> getPromociones() {
+	public Set<Oferta> getPromociones() {
 		return promociones;
 	}
-	public void setPromociones(Set<Promocion> promociones) {
+	public void setPromociones(Set<Oferta> promociones) {
 		this.promociones = promociones;
 	}
 	

@@ -16,18 +16,24 @@
         <property name="fecha_compra" type="date" not-null="true" column="FECHA_COMPRA"/>
  
         <many-to-one name="tarjeta_credito" class="org.hibernate.turesuelve.domain.TarjetaCredito" fetch="select">
-            <column name="TARJETA_ID" not-null="true">
-        	</column>
+            <column name="TARJETA_ID" not-null="true"/>
         </many-to-one>
-        
-   <!--     
+               
         <many-to-one name="compra_perteneciente" class="org.hibernate.turesuelve.domain.Compra" fetch="select">
-              <column name="USUARIO_ID"></column>
-              <column name="DESCRIPCION"></column>
-              <column name="FECHA_INICIO_VEGENCIA"></column>
-              <column name="FECHA_FIN_VIGENCIA"></column>
+	            <column name="COMPRADOR"/>
+	            <column name="DESCRIPCION"/>
+	            <column name="FECHA_INICIO_VIGENCIA"/>
+	            <column name="FECHA_FIN_VIGENCIA"/>
         </many-to-one>
-   -->
+               
+        <many-to-one name="oferta_especifica" class="org.hibernate.turesuelve.domain.Oferta" fetch="select">
+            	<column name="NOMBRE_CIUDAD" not-null="true"/>
+                <column name="NOMBRE_PAIS" not-null="true"/>
+	            <column name="DESCRIPCION_OFERTA"/>
+	            <column name="FECHA_INICIO_VIGENCIA_OFERTA"/>
+	            <column name="FECHA_FIN_VIGENCIA_OFERTA"/>
+        </many-to-one>
+  
    
    </class>
 </hibernate-mapping>

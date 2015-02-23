@@ -30,27 +30,27 @@
         
  		 <joined-subclass name="Subcategoria" table="SUBCATEGORIA">
         		
-        		<key column="ID_PADRE_SUB"/>
+        		<key column="CATEGORIA_ID"/>
         		
-        		<!-- <set name="promociones" table="PROMOCION" inverse="true" lazy="true" fetch="select">
+        		<set name="promociones" table="PROMOCION" inverse="true" lazy="true" fetch="select">
             		<key>
-                		<column name="ID_PADRE_SUB" not-null="true"/>
+                		<column name="ID_SUBCATEGORIA" not-null="true"/>
             		</key>
-            		<one-to-many class="org.hibernate.tutorial.domain.Promocion"> 
-            		</one-to-many>
-        		</set>-->
+            		<one-to-many class="org.hibernate.turesuelve.domain.Promocion"/>
+        		</set>
+        		<many-to-one name="categoria_padre" class="org.hibernate.turesuelve.domain.CategoriaGeneral"></many-to-one>
  
    		  </joined-subclass>
    		  
  		  <joined-subclass name="Categoria" table="CATEGORIA">
         		
-        		<key column="ID_PADRE_CAT"/>
+        		<key column="CATEGORIA_ID"/>
         		
         		<set name = "subcategorias" lazy= "true" table= "SUBCATEGORIA">
- 						<key><column name ="ID_PADRE_CAT" not-null="true"></column></key>
- 						<composite-element class="Subcategoria">
- 							<property name="nombre_categoria" column="ID_PADRE_SUB" not-null="true" />
-  						</composite-element>
+ 						<key>
+ 							<column name ="ID_PADRE_CAT" not-null="false"></column>
+ 						</key>
+ 						<one-to-many class="org.hibernate.turesuelve.domain.CategoriaGeneral"/>
 				</set>
 				
    		  </joined-subclass>

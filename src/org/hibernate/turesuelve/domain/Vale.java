@@ -10,17 +10,37 @@ public class Vale {
 	private Date fecha_envio;
 	private Date fecha_compra;
 	private TarjetaCredito tarjeta_credito;
-	//private Compra compra_perteneciente;
+	private Compra compra_perteneciente;
+	private Oferta oferta_especifica;
 	
 	public Vale(String codigo_vale, String info_promocion, String correo_electronico_vale, 
-			Date fecha_envio, Date fecha_compra) {
+			Date fecha_envio, Date fecha_compra, Compra compra_perteneciente, TarjetaCredito tarjeta_credito, Oferta oferta_especifica) {
 		this.codigo_vale = codigo_vale;
 		this.info_promocion = info_promocion;
 		this.correo_electronico_vale = correo_electronico_vale;
 		this.fecha_envio = fecha_envio;
 		this.fecha_compra = fecha_compra;
+		this.compra_perteneciente = compra_perteneciente;
+		this.tarjeta_credito = tarjeta_credito;
+		this.oferta_especifica = oferta_especifica;
 	}
 	
+	public Oferta getOferta_especifica() {
+		return oferta_especifica;
+	}
+
+	public void setOferta_especifica(Oferta oferta_especifica) {
+		this.oferta_especifica = oferta_especifica;
+	}
+
+	public Compra getCompra_perteneciente() {
+		return compra_perteneciente;
+	}
+
+	public void setCompra_perteneciente(Compra compra_perteneciente) {
+		this.compra_perteneciente = compra_perteneciente;
+	}
+
 	public String getCodigo_vale() {
 		return codigo_vale;
 	}
@@ -69,12 +89,5 @@ public class Vale {
 		this.tarjeta_credito = tarjeta_credito;
 	}
 
-	//public Compra getCompra_perteneciente() {
-		//return compra_perteneciente;
-	//}
-
-	//public void setCompra_perteneciente(Compra compra_perteneciente) {
-		//this.compra_perteneciente = compra_perteneciente;
-	//}
 	
 }

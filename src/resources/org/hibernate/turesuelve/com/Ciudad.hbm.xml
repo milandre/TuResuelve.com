@@ -22,19 +22,14 @@
                <column name="NOMBRE_PAIS" not-null="true"/></key> 
            <many-to-many column="USUARIO_ID" class="org.hibernate.turesuelve.domain.Usuario"></many-to-many>
         </set>
-        
-		 <set name="promociones" table="CIUDAD_PROMOCION" inverse="false" lazy="true" fetch="select" cascade="all">
-           <key>
-          	  <column name="NOMBRE_CIUDAD"></column>
-              <column name="NOMBRE_PAIS"></column>  
-           </key>
-           <many-to-many class="org.hibernate.turesuelve.domain.Promocion">
-              <column name="DESCRIPCION" not-null="true"/>
-              <column name="FECHA_INICIO_VIGENCIA" not-null="true"/>
-              <column name="FECHA_FIN_VIGENCIA" not-null="true"/>
-           </many-to-many>
+
+		<set name="promociones" table="OFERTA" inverse="false" lazy="true" fetch="select" cascade="all">
+            <key>
+            	<column name="NOMBRE_CIUDAD" not-null="true"/>
+                <column name="NOMBRE_PAIS" not-null="true"/>
+            </key> 
+            <one-to-many class="org.hibernate.turesuelve.domain.Oferta"></one-to-many>
         </set>
-		 
  		
  	</class>
  	

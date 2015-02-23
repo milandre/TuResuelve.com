@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="org.hibernate.turesuelve.domain">
+ 
+    <class name="Compra" table="COMPRA">
+        
+        <composite-id name="compra_r" class="org.hibernate.turesuelve.domain.CompraR">
+	        <key-many-to-one name="comprador" class="org.hibernate.turesuelve.domain.Usuario" column="COMPRADOR"/>
+	        <key-many-to-one name="promocion_comprada" class="org.hibernate.turesuelve.domain.Promocion">
+	            <column name="DESCRIPCION"/>
+	            <column name="FECHA_INICIO_VIGENCIA"/>
+	            <column name="FECHA_FIN_VIGENCIA"/>
+	        </key-many-to-one>
+		</composite-id>
+		
+
+	    <set name="vales" table="VALE" inverse="true" lazy="true" fetch="select" cascade="all">
+	     	<key>
+	            <column name="COMPRADOR"/>
+	            <column name="DESCRIPCION"/>
+	            <column name="FECHA_INICIO_VIGENCIA"/>
+	            <column name="FECHA_FIN_VIGENCIA"/>
+            </key>
+	        <one-to-many class="org.hibernate.turesuelve.domain.Vale"></one-to-many>
+	    </set> 
+
+ 	</class>
+ 	
+</hibernate-mapping>

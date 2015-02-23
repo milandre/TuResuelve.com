@@ -7,6 +7,12 @@ public class Categoria extends CategoriaGeneral{
 	
 	private Set<Subcategoria> subcategorias = new HashSet<Subcategoria>();
 	
+	public Categoria() {
+		super();
+	}
+	public Categoria(String nombre) {
+		super(nombre);
+	}
 	public Set<Subcategoria> getSubcategorias() {
 		return subcategorias;
 	}

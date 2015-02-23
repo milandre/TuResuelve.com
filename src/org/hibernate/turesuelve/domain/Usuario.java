@@ -17,7 +17,7 @@ public class Usuario {
 	private Set<Usuario> principales = new HashSet<Usuario>();
     private Set<Usuario> amigos = new HashSet<Usuario>();
     private Set<CategoriaGeneral> categorias = new HashSet<CategoriaGeneral>();
-    private Set<Promocion> promociones_compradas = new HashSet<Promocion>();
+    private Set<Compra> promociones_compradas = new HashSet<Compra>();
 	
 	public Usuario(){}	
 	
@@ -115,11 +115,11 @@ public class Usuario {
 		this.categorias = categorias;
 	}
 	
-	public Set<Promocion> getPromociones_compradas() {
+	public Set<Compra> getPromociones_compradas() {
 		return promociones_compradas;
 	}
 
-	public void setPromociones_compradas(Set<Promocion> promociones_compradas) {
+	public void setPromociones_compradas(Set<Compra> promociones_compradas) {
 		this.promociones_compradas = promociones_compradas;
 	}
 	

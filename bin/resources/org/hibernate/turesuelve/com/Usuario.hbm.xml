@@ -59,7 +59,14 @@
            </many-to-many>
 	    </set> 
 	    
-	    <set name="promociones_compradas" table="COMPRA" inverse="false" lazy="true" fetch="select" cascade="all">
+	    
+		<set name="promociones_compradas" table="COMPRA" inverse="false" lazy="true" fetch="select" cascade="all">
+            <key>
+                <column name="comprador" not-null="true"/>
+            </key>
+            <one-to-many class="org.hibernate.turesuelve.domain.Compra"></one-to-many>
+        </set>
+	<!--     <set name="promociones_compradas" table="COMPRA" inverse="false" lazy="true" fetch="select" cascade="all">
            <key>
               <column name="USUARIO_ID" not-null="true"/>
            </key>
@@ -68,7 +75,7 @@
                <column name="FECHA_INICIO_VIGENCIA"></column>
                <column name="FECHA_FIN_VIGENCIA"></column>
            </many-to-many>
-        </set>
+        </set> -->
 	    
 	    
 	     <!-- <map name="COMPARTE">

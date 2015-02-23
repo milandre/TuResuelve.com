@@ -19,7 +19,7 @@
 		<property name="tipo" column="TIPO" not-null="true"/>
 		<property name="es_continuo" column="ES_CONTINUO" not-null="true" type="boolean"/>
        		
- 		 <set name="ciudades_ofertadas" table="CIUDAD_PROMOCION" inverse="true" lazy="true" fetch="select" cascade="all">
+<!--  		 <set name="ciudades_ofertadas" table="CIUDAD_PROMOCION" inverse="true" lazy="true" fetch="select" cascade="all">
           	<key>
               <column name="DESCRIPCION" not-null="true"/>
               <column name="FECHA_INICIO_VIGENCIA" not-null="true"/>
@@ -29,14 +29,41 @@
               <column name="NOMBRE_CIUDAD"></column>
                <column name="NOMBRE_PAIS"></column>
            </many-to-many>
-        </set>
+        </set> -->
  		
- 		<!-- <many-to-one name="subcategoria" class="org.hibernate.tutorial.domain.Subcategoria" fetch="select">
-            <column name="ID_PADRE_SUB" not-null="true">
+ 		<many-to-one name="subcategoria" class="org.hibernate.turesuelve.domain.Subcategoria" fetch="select">
+            <column name="ID_SUBCATEGORIA" not-null="true">
         	</column>
-        </many-to-one>-->
+        </many-to-one>
  		 
- 		<set name="compradores" table="COMPRA" inverse="false" lazy="true" fetch="select" cascade="all">
+    <set name="compradores" lazy="true"  inverse="true">
+        <key>
+            <column name="DESCRIPCION"/>
+            <column name="FECHA_INICIO_VIGENCIA"/>
+            <column name="FECHA_FIN_VIGENCIA"/>
+        </key>
+        <one-to-many class="org.hibernate.turesuelve.domain.Compra"
+        />
+    </set>
+ 		 
+    <set name="ciudades_ofertadas" lazy="true"  inverse="true">
+        <key>
+            <column name="DESCRIPCION"/>
+	        <column name="FECHA_INICIO_VIGENCIA"/>
+	        <column name="FECHA_FIN_VIGENCIA"/>
+        </key>
+        <one-to-many class="org.hibernate.turesuelve.domain.Oferta"
+        />
+    </set>
+ 		 
+<!-- 		<set name="compradores" table="COMPRA" inverse="false" lazy="true" fetch="select" cascade="all">
+            <key>
+                <column name="promocion_comprada" not-null="true"/>
+            </key>
+            <many-to-many class="org.hibernate.turesuelve.domain.Compra"></many-to-many>
+        </set> -->
+        
+<!--  		<set name="compradores" table="COMPRA" inverse="false" lazy="true" fetch="select" cascade="all">
             <key>
               <column name="DESCRIPCION" not-null="true"/>
               <column name="FECHA_INICIO_VIGENCIA" not-null="true"/>
@@ -44,7 +71,7 @@
             </key>
               <many-to-many column="USUARIO_ID" class="org.hibernate.turesuelve.domain.Usuario">
               </many-to-many>
-         </set>
+         </set> -->
  		 
  	</class>
  	
