@@ -72,6 +72,13 @@
               <many-to-many column="USUARIO_ID" class="org.hibernate.turesuelve.domain.Usuario">
               </many-to-many>
          </set> -->
+         
+         <many-to-one name="comparte_perteneciente" class="org.hibernate.turesuelve.domain.Comparte" fetch="select">
+	            <column name="REMITENTE"/>
+	     	    <column name="DESTINATARIO"/>
+	     </many-to-one>
+         
+         
  		 
  	</class>
  	

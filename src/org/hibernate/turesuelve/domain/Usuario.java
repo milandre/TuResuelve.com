@@ -122,5 +122,5 @@ public class Usuario {
 	public void setPromociones_compradas(Set<Compra> promociones_compradas) {
 		this.promociones_compradas = promociones_compradas;
 	}
-	
+
 }

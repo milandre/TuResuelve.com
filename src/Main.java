@@ -94,7 +94,7 @@ public class Main {
 		session.save(usuario2);
 		
 		Compra compra1 = new Compra(new CompraR(usuario1, prom1));
-		Compra compra2 = new Compra(new CompraR(usuario1, prom2));
+		Compra compra2 = new Compra(new CompraR(usuario2, prom2));
 		Compra compra3 = new Compra(new CompraR(usuario2, prom1));
 		session.save(compra1);
 		session.save(compra2);
@@ -116,7 +116,7 @@ public class Main {
 		session.save(vale3);
 		session.save(vale4);
 
-		
+		 	
 		// Promociones de una ciudad
 		Query query1 = session.createQuery("select oftr.promocion_ofertada from Oferta as oft join oft.oferta_r as oftr join oftr.ciudad as ciud where ciud.nombre_ciudad = :ciudad and  ciud.nombre_pais = :pais ");
 		query1.setParameter("ciudad", "Barcelona");
@@ -124,8 +124,12 @@ public class Main {
 		List<Promocion> prom_ciudad = query1.list();
 		
 		for(Promocion tarjeta : prom_ciudad) {
+			System.out.println("**************************");
+			System.out.println("**EJECUCION DE CONSULTAS**");
+			System.out.println("**************************");
             System.out.println(tarjeta.getDescripcion());
         }
+		
 		
 		
 		// Promociones compradas por un usuario
@@ -145,6 +149,8 @@ public class Main {
 		for(Ciudad ciudad : ciudad_imp) {
             System.out.println(ciudad.getNombre_ciudad() + "," + ciudad.getNombre_pais());
         }
+		
+		
 		
 		session.getTransaction().commit();
 		session.close(); //En create-drop mode, esto permite crear el esquema.

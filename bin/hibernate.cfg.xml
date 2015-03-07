@@ -19,7 +19,6 @@
       root
    </property>
    <property name="hibernate.connection.password">
-      admin
    </property>
    
    <!-- Enable Hibernate's automatic session context management -->
@@ -49,6 +48,7 @@
    <mapping resource="resources/org/hibernate/turesuelve/com/Vale.hbm.xml"/>
    <mapping resource="resources/org/hibernate/turesuelve/com/Compra.hbm.xml"/>
    <mapping resource="resources/org/hibernate/turesuelve/com/Oferta.hbm.xml"/>
+   <mapping resource="resources/org/hibernate/turesuelve/com/Comparte.hbm.xml"/>
    
 </session-factory>
 </hibernate-configuration>

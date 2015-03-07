@@ -20,6 +20,7 @@ public class Promocion implements Serializable{
 	private Set<Oferta> ciudades_ofertadas = new HashSet<Oferta>();
 	private Subcategoria subcategoria;
 	private Set<Compra> compradores = new HashSet<Compra>();
+	private Comparte comparte_perteneciente;
 	
 	
 	public Promocion(){}
@@ -116,6 +117,14 @@ public class Promocion implements Serializable{
 
 	public void setCompradores(Set<Compra> compradores) {
 		this.compradores = compradores;
+	}
+
+	public Comparte getComparte_perteneciente() {
+		return comparte_perteneciente;
+	}
+
+	public void setComparte_perteneciente(Comparte comparte_perteneciente) {
+		this.comparte_perteneciente = comparte_perteneciente;
 	}
 
 	public boolean equals(Object obj) {

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="org.hibernate.turesuelve.domain">
+ 
+    <class name="Vale" table="VALE">
+    
+        <id name="codigo_vale" column="CODIGO_VALE">
+        </id>
+ 
+        <property name="info_promocion" not-null="true" column="INFO_PROMOCION"/>
+        <property name="correo_electronico_vale" not-null="true" column="CORREO"/>
+        <property name="fecha_envio" type="date" not-null="true" column="FECHA_ENVIO"/>
+        <property name="fecha_compra" type="date" not-null="true" column="FECHA_COMPRA"/>
+ 
+        <many-to-one name="tarjeta_credito" class="org.hibernate.turesuelve.domain.TarjetaCredito" fetch="select">
+            <column name="TARJETA_ID" not-null="true"/>
+        </many-to-one>
+               
+        <many-to-one name="compra_perteneciente" class="org.hibernate.turesuelve.domain.Compra" fetch="select">
+	            <column name="COMPRADOR"/>
+	            <column name="DESCRIPCION"/>
+	            <column name="FECHA_INICIO_VIGENCIA"/>
+	            <column name="FECHA_FIN_VIGENCIA"/>
+        </many-to-one>
+               
+        <many-to-one name="oferta_especifica" class="org.hibernate.turesuelve.domain.Oferta" fetch="select">
+            	<column name="NOMBRE_CIUDAD" not-null="true"/>
+                <column name="NOMBRE_PAIS" not-null="true"/>
+	            <column name="DESCRIPCION_OFERTA"/>
+	            <column name="FECHA_INICIO_VIGENCIA_OFERTA"/>
+	            <column name="FECHA_FIN_VIGENCIA_OFERTA"/>
+        </many-to-one>
+  
+   
+   </class>
+</hibernate-mapping>
