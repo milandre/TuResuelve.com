@@ -19,6 +19,7 @@
       root
    </property>
    <property name="hibernate.connection.password">
+      admin
    </property>
    
    <!-- Enable Hibernate's automatic session context management -->

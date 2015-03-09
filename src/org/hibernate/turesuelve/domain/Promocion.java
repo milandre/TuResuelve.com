@@ -16,6 +16,7 @@ public class Promocion implements Serializable{
 	private Date fecha_inicio_vigencia;
 	private Date fecha_fin_vigencia;
 	private Boolean es_continuo;
+	private Boolean activa;
 	//private Set<Date> fechas_canje = new Set<Date>();
 	private Set<Oferta> ciudades_ofertadas = new HashSet<Oferta>();
 	private Subcategoria subcategoria;
@@ -36,7 +37,7 @@ public class Promocion implements Serializable{
 		this.fecha_fin_vigencia = fecha_fin;
 		this.es_continuo = es_continuo;
 		this.subcategoria = subcategoria;
-		
+		this.activa = false;
 	}
 	
 	public String getDescripcion() {
@@ -93,6 +94,14 @@ public class Promocion implements Serializable{
 	
 	public void setEs_continuo(Boolean es_continuo) {
 		this.es_continuo = es_continuo;
+	}
+
+	public Boolean getActiva() {
+		return activa;
+	}
+
+	public void setActiva(Boolean activa) {
+		this.activa = activa;
 	}
 	
 	public Set<Oferta> getCiudades_ofertadas() {

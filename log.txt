@@ -1,0 +1,186 @@
+Feb 23, 2015 9:27:49 AM org.hibernate.annotations.common.reflection.java.JavaReflectionManager <clinit>
+INFO: HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+Feb 23, 2015 9:27:49 AM org.hibernate.Version logVersion
+INFO: HHH000412: Hibernate Core {4.3.8.Final}
+Feb 23, 2015 9:27:49 AM org.hibernate.cfg.Environment <clinit>
+INFO: HHH000206: hibernate.properties not found
+Feb 23, 2015 9:27:49 AM org.hibernate.cfg.Environment buildBytecodeProvider
+INFO: HHH000021: Bytecode provider name : javassist
+Feb 23, 2015 9:27:49 AM org.hibernate.cfg.Configuration configure
+INFO: HHH000043: Configuring from resource: /hibernate.cfg.xml
+Feb 23, 2015 9:27:49 AM org.hibernate.cfg.Configuration getConfigurationInputStream
+INFO: HHH000040: Configuration resource: /hibernate.cfg.xml
+Feb 23, 2015 9:27:49 AM org.hibernate.cfg.Configuration addResource
+INFO: HHH000221: Reading mappings from resource: resources/org/hibernate/turesuelve/com/Usuario.hbm.xml
+Feb 23, 2015 9:27:49 AM org.hibernate.cfg.Configuration addResource
+INFO: HHH000221: Reading mappings from resource: resources/org/hibernate/turesuelve/com/TarjetaCredito.hbm.xml
+Feb 23, 2015 9:27:49 AM org.hibernate.cfg.Configuration addResource
+INFO: HHH000221: Reading mappings from resource: resources/org/hibernate/turesuelve/com/Ciudad.hbm.xml
+Feb 23, 2015 9:27:49 AM org.hibernate.cfg.Configuration addResource
+INFO: HHH000221: Reading mappings from resource: resources/org/hibernate/turesuelve/com/Promocion.hbm.xml
+Feb 23, 2015 9:27:49 AM org.hibernate.cfg.Configuration addResource
+INFO: HHH000221: Reading mappings from resource: resources/org/hibernate/turesuelve/com/CategoriaGeneral.hbm.xml
+Feb 23, 2015 9:27:49 AM org.hibernate.cfg.Configuration addResource
+INFO: HHH000221: Reading mappings from resource: resources/org/hibernate/turesuelve/com/Empresa.hbm.xml
+Feb 23, 2015 9:27:49 AM org.hibernate.cfg.Configuration addResource
+INFO: HHH000221: Reading mappings from resource: resources/org/hibernate/turesuelve/com/Vale.hbm.xml
+Feb 23, 2015 9:27:49 AM org.hibernate.cfg.Configuration addResource
+INFO: HHH000221: Reading mappings from resource: resources/org/hibernate/turesuelve/com/Compra.hbm.xml
+Feb 23, 2015 9:27:49 AM org.hibernate.cfg.Configuration addResource
+INFO: HHH000221: Reading mappings from resource: resources/org/hibernate/turesuelve/com/Oferta.hbm.xml
+Feb 23, 2015 9:27:49 AM org.hibernate.cfg.Configuration doConfigure
+INFO: HHH000041: Configured SessionFactory: null
+Feb 23, 2015 9:27:50 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+WARN: HHH000402: Using Hibernate built-in connection pool (not for production use!)
+Feb 23, 2015 9:27:50 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/turesuelve]
+Feb 23, 2015 9:27:50 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH000046: Connection properties: {user=root, password=****}
+Feb 23, 2015 9:27:50 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH000006: Autocommit mode: false
+Feb 23, 2015 9:27:50 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000115: Hibernate connection pool size: 1 (min=1)
+Feb 23, 2015 9:27:50 AM org.hibernate.dialect.Dialect <init>
+INFO: HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+Feb 23, 2015 9:27:50 AM org.hibernate.mapping.RootClass checkCompositeIdentifier
+WARN: HHH000038: Composite-id class does not override equals(): org.hibernate.turesuelve.domain.Empresa
+Feb 23, 2015 9:27:50 AM org.hibernate.mapping.RootClass checkCompositeIdentifier
+WARN: HHH000039: Composite-id class does not override hashCode(): org.hibernate.turesuelve.domain.Empresa
+Feb 23, 2015 9:27:50 AM org.hibernate.mapping.RootClass checkCompositeIdentifier
+WARN: HHH000038: Composite-id class does not override equals(): org.hibernate.turesuelve.domain.Ciudad
+Feb 23, 2015 9:27:50 AM org.hibernate.mapping.RootClass checkCompositeIdentifier
+WARN: HHH000039: Composite-id class does not override hashCode(): org.hibernate.turesuelve.domain.Ciudad
+Feb 23, 2015 9:27:50 AM org.hibernate.engine.transaction.internal.TransactionFactoryInitiator initiateService
+INFO: HHH000399: Using default transaction strategy (direct JDBC transactions)
+Feb 23, 2015 9:27:50 AM org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory <init>
+INFO: HHH000397: Using ASTQueryTranslatorFactory
+Feb 23, 2015 9:27:50 AM org.hibernate.tuple.PojoInstantiator <init>
+INFO: HHH000182: No default (no-argument) constructor for class: org.hibernate.turesuelve.domain.Vale (class must be instantiated by Interceptor)
+Feb 23, 2015 9:27:51 AM org.hibernate.tool.hbm2ddl.SchemaExport execute
+INFO: HHH000227: Running hbm2ddl schema export
+Hibernate: alter table AMIGOS drop foreign key FK_ojo61wpjone32np4hq4cs09e8
+Hibernate: alter table AMIGOS drop foreign key FK_njmxojci4lngtd4p0agguldil
+Hibernate: alter table CATEGORIA drop foreign key FK_cxxmljg6thgxc6qks708hga0i
+Hibernate: alter table CATEGORIA_GENERAL drop foreign key FK_1rjstt3h6d1pu3yj57t3xxc5b
+Hibernate: alter table COMPRA drop foreign key FK_qy4qkwep5ie6rvs1ek3g12qkg
+Hibernate: alter table COMPRA drop foreign key FK_7ang66vg30hu2l94w1uc0xiia
+Hibernate: alter table EMPRESA_CATEGORIA drop foreign key FK_81se4ow8xji0g9ydfrc5cnt60
+Hibernate: alter table EMPRESA_CATEGORIA drop foreign key FK_71yyx03tgsjcwmc1b4x9fc60t
+Hibernate: alter table OFERTA drop foreign key FK_4vp61wqk2v0mqx7rqxkav52xm
+Hibernate: alter table OFERTA drop foreign key FK_kcscms53l7fid6h04m4uw8jy4
+Hibernate: alter table PROMOCION drop foreign key FK_iowtekxm8a3pnb95lrfgu2ytv
+Hibernate: alter table SUBCATEGORIA drop foreign key FK_qh8f6l8bukxv7vrpfq25drcu9
+Hibernate: alter table SUBCATEGORIA drop foreign key FK_oe82sm67xheg7pwwhs5hloylm
+Hibernate: alter table USUARIO_CATEGORIA drop foreign key FK_kacyd0c3w335qtd5894i1j390
+Hibernate: alter table USUARIO_CATEGORIA drop foreign key FK_5nqvxrhesiej3qg06nfe2b04l
+Hibernate: alter table USUARIO_CIUDAD drop foreign key FK_owmp6fkhef556tei5o63be16r
+Hibernate: alter table USUARIO_CIUDAD drop foreign key FK_n1kwbf78ktinmpm86uqou4vh9
+Hibernate: alter table USUARIO_TARJETA drop foreign key FK_ertfboml230p4hn2qk0ri77lk
+Hibernate: alter table USUARIO_TARJETA drop foreign key FK_fp997j582e7aoruxvqg28l443
+Hibernate: alter table VALE drop foreign key FK_78jcscd4q8vo1582jsr5m5na
+Hibernate: alter table VALE drop foreign key FK_ftor2xafl5p48hofla61g6gqi
+Hibernate: alter table VALE drop foreign key FK_8qx83s9m2sk7bemgaxhph2w2m
+Hibernate: alter table VALE drop foreign key FK_mpfucpukvdaujfrhcdgm8bp7h
+Hibernate: drop table if exists AMIGOS
+Hibernate: drop table if exists CATEGORIA
+Hibernate: drop table if exists CATEGORIA_GENERAL
+Hibernate: drop table if exists CIUDAD
+Hibernate: drop table if exists COMPRA
+Hibernate: drop table if exists EMPRESA
+Hibernate: drop table if exists EMPRESA_CATEGORIA
+Hibernate: drop table if exists OFERTA
+Hibernate: drop table if exists PROMOCION
+Hibernate: drop table if exists SUBCATEGORIA
+Hibernate: drop table if exists TARJETA_CREDITO
+Hibernate: drop table if exists USUARIO
+Hibernate: drop table if exists USUARIO_CATEGORIA
+Hibernate: drop table if exists USUARIO_CIUDAD
+Hibernate: drop table if exists USUARIO_TARJETA
+Hibernate: drop table if exists VALE
+Hibernate: create table AMIGOS (USUARIO_ID varchar(255) not null, AMIGO_ID varchar(255) not null, primary key (AMIGO_ID, USUARIO_ID))
+Hibernate: create table CATEGORIA (CATEGORIA_ID varchar(255) not null, primary key (CATEGORIA_ID))
+Hibernate: create table CATEGORIA_GENERAL (CATEGORIA_ID varchar(255) not null, ID_PADRE_CAT varchar(255), primary key (CATEGORIA_ID))
+Hibernate: create table CIUDAD (NOMBRE_CIUDAD varchar(255) not null, NOMBRE_PAIS varchar(255) not null, primary key (NOMBRE_CIUDAD, NOMBRE_PAIS))
+Hibernate: create table COMPRA (COMPRADOR varchar(255) not null, DESCRIPCION varchar(255) not null, FECHA_INICIO_VIGENCIA date not null, FECHA_FIN_VIGENCIA date not null, primary key (COMPRADOR, DESCRIPCION, FECHA_INICIO_VIGENCIA, FECHA_FIN_VIGENCIA))
+Hibernate: create table EMPRESA (NOMBRE_EMPRESA varchar(255) not null, TELEFONO varchar(255) not null, DIRECCION varchar(255) not null, NRO_CLIENTES integer not null, primary key (NOMBRE_EMPRESA, TELEFONO))
+Hibernate: create table EMPRESA_CATEGORIA (CATEGORIA_ID varchar(255) not null, NOMBRE_EMPRESA varchar(255) not null, TELEFONO varchar(255) not null, primary key (NOMBRE_EMPRESA, TELEFONO, CATEGORIA_ID))
+Hibernate: create table OFERTA (NOMBRE_CIUDAD varchar(255) not null, NOMBRE_PAIS varchar(255) not null, DESCRIPCION varchar(255) not null, FECHA_INICIO_VIGENCIA date not null, FECHA_FIN_VIGENCIA date not null, primary key (NOMBRE_CIUDAD, NOMBRE_PAIS, DESCRIPCION, FECHA_INICIO_VIGENCIA, FECHA_FIN_VIGENCIA))
+Hibernate: create table PROMOCION (DESCRIPCION varchar(255) not null, FECHA_INICIO_VIGENCIA date not null, FECHA_FIN_VIGENCIA date not null, MONTO_ORIGINAL float not null, MONTO_OFERTA float not null, TIPO varchar(255) not null, ES_CONTINUO bit not null, ID_SUBCATEGORIA varchar(255) not null, primary key (DESCRIPCION, FECHA_INICIO_VIGENCIA, FECHA_FIN_VIGENCIA))
+Hibernate: create table SUBCATEGORIA (CATEGORIA_ID varchar(255) not null, categoria_padre varchar(255), primary key (CATEGORIA_ID))
+Hibernate: create table TARJETA_CREDITO (TARJETA_ID varchar(255) not null, ID_TITULAR varchar(255) not null, NOMBRE_TITULAR varchar(255) not null, TIPO_TARJETA varchar(255) not null, CODIGO_VALIDACION varchar(255) not null, FECHA_VENCIMIENTO date not null, primary key (TARJETA_ID))
+Hibernate: create table USUARIO (USUARIO_ID varchar(255) not null, CLAVE varchar(255) not null, NOMBRE varchar(255) not null, APELLIDO varchar(255) not null, CORREO varchar(255) not null, DINERO_PROMOCION float default 0.0, primary key (USUARIO_ID))
+Hibernate: create table USUARIO_CATEGORIA (USUARIO_ID varchar(255) not null, CATEGORIA_ID varchar(255) not null, primary key (USUARIO_ID, CATEGORIA_ID))
+Hibernate: create table USUARIO_CIUDAD (USUARIO_ID varchar(255) not null, NOMBRE_CIUDAD varchar(255) not null, NOMBRE_PAIS varchar(255) not null, primary key (USUARIO_ID, NOMBRE_CIUDAD, NOMBRE_PAIS))
+Hibernate: create table USUARIO_TARJETA (USUARIO_ID varchar(255) not null, TARJETA_ID varchar(255) not null, primary key (USUARIO_ID, TARJETA_ID))
+Hibernate: create table VALE (CODIGO_VALE varchar(255) not null, INFO_PROMOCION varchar(255) not null, CORREO varchar(255) not null, FECHA_ENVIO date not null, FECHA_COMPRA date not null, TARJETA_ID varchar(255) not null, COMPRADOR varchar(255), DESCRIPCION varchar(255), FECHA_INICIO_VIGENCIA date, FECHA_FIN_VIGENCIA date, NOMBRE_CIUDAD varchar(255) not null, NOMBRE_PAIS varchar(255) not null, DESCRIPCION_OFERTA varchar(255), FECHA_INICIO_VIGENCIA_OFERTA date, FECHA_FIN_VIGENCIA_OFERTA date, primary key (CODIGO_VALE))
+Hibernate: alter table AMIGOS add constraint FK_ojo61wpjone32np4hq4cs09e8 foreign key (AMIGO_ID) references USUARIO (USUARIO_ID)
+Hibernate: alter table AMIGOS add constraint FK_njmxojci4lngtd4p0agguldil foreign key (USUARIO_ID) references USUARIO (USUARIO_ID)
+Hibernate: alter table CATEGORIA add constraint FK_cxxmljg6thgxc6qks708hga0i foreign key (CATEGORIA_ID) references CATEGORIA_GENERAL (CATEGORIA_ID)
+Hibernate: alter table CATEGORIA_GENERAL add constraint FK_1rjstt3h6d1pu3yj57t3xxc5b foreign key (ID_PADRE_CAT) references CATEGORIA (CATEGORIA_ID)
+Hibernate: alter table COMPRA add constraint FK_qy4qkwep5ie6rvs1ek3g12qkg foreign key (COMPRADOR) references USUARIO (USUARIO_ID)
+Hibernate: alter table COMPRA add constraint FK_7ang66vg30hu2l94w1uc0xiia foreign key (DESCRIPCION, FECHA_INICIO_VIGENCIA, FECHA_FIN_VIGENCIA) references PROMOCION (DESCRIPCION, FECHA_INICIO_VIGENCIA, FECHA_FIN_VIGENCIA)
+Hibernate: alter table EMPRESA_CATEGORIA add constraint FK_81se4ow8xji0g9ydfrc5cnt60 foreign key (NOMBRE_EMPRESA, TELEFONO) references EMPRESA (NOMBRE_EMPRESA, TELEFONO)
+Hibernate: alter table EMPRESA_CATEGORIA add constraint FK_71yyx03tgsjcwmc1b4x9fc60t foreign key (CATEGORIA_ID) references CATEGORIA_GENERAL (CATEGORIA_ID)
+Hibernate: alter table OFERTA add constraint FK_4vp61wqk2v0mqx7rqxkav52xm foreign key (NOMBRE_CIUDAD, NOMBRE_PAIS) references CIUDAD (NOMBRE_CIUDAD, NOMBRE_PAIS)
+Hibernate: alter table OFERTA add constraint FK_kcscms53l7fid6h04m4uw8jy4 foreign key (DESCRIPCION, FECHA_INICIO_VIGENCIA, FECHA_FIN_VIGENCIA) references PROMOCION (DESCRIPCION, FECHA_INICIO_VIGENCIA, FECHA_FIN_VIGENCIA)
+Hibernate: alter table PROMOCION add constraint FK_iowtekxm8a3pnb95lrfgu2ytv foreign key (ID_SUBCATEGORIA) references SUBCATEGORIA (CATEGORIA_ID)
+Hibernate: alter table SUBCATEGORIA add constraint FK_qh8f6l8bukxv7vrpfq25drcu9 foreign key (CATEGORIA_ID) references CATEGORIA_GENERAL (CATEGORIA_ID)
+Hibernate: alter table SUBCATEGORIA add constraint FK_oe82sm67xheg7pwwhs5hloylm foreign key (categoria_padre) references CATEGORIA_GENERAL (CATEGORIA_ID)
+Hibernate: alter table USUARIO_CATEGORIA add constraint FK_kacyd0c3w335qtd5894i1j390 foreign key (CATEGORIA_ID) references CATEGORIA_GENERAL (CATEGORIA_ID)
+Hibernate: alter table USUARIO_CATEGORIA add constraint FK_5nqvxrhesiej3qg06nfe2b04l foreign key (USUARIO_ID) references USUARIO (USUARIO_ID)
+Hibernate: alter table USUARIO_CIUDAD add constraint FK_owmp6fkhef556tei5o63be16r foreign key (NOMBRE_CIUDAD, NOMBRE_PAIS) references CIUDAD (NOMBRE_CIUDAD, NOMBRE_PAIS)
+Hibernate: alter table USUARIO_CIUDAD add constraint FK_n1kwbf78ktinmpm86uqou4vh9 foreign key (USUARIO_ID) references USUARIO (USUARIO_ID)
+Hibernate: alter table USUARIO_TARJETA add constraint FK_ertfboml230p4hn2qk0ri77lk foreign key (TARJETA_ID) references TARJETA_CREDITO (TARJETA_ID)
+Hibernate: alter table USUARIO_TARJETA add constraint FK_fp997j582e7aoruxvqg28l443 foreign key (USUARIO_ID) references USUARIO (USUARIO_ID)
+Hibernate: alter table VALE add constraint FK_78jcscd4q8vo1582jsr5m5na foreign key (TARJETA_ID) references TARJETA_CREDITO (TARJETA_ID)
+Hibernate: alter table VALE add constraint FK_ftor2xafl5p48hofla61g6gqi foreign key (COMPRADOR, DESCRIPCION, FECHA_INICIO_VIGENCIA, FECHA_FIN_VIGENCIA) references COMPRA (COMPRADOR, DESCRIPCION, FECHA_INICIO_VIGENCIA, FECHA_FIN_VIGENCIA)
+Hibernate: alter table VALE add constraint FK_8qx83s9m2sk7bemgaxhph2w2m foreign key (NOMBRE_CIUDAD, NOMBRE_PAIS, DESCRIPCION_OFERTA, FECHA_INICIO_VIGENCIA_OFERTA, FECHA_FIN_VIGENCIA_OFERTA) references OFERTA (NOMBRE_CIUDAD, NOMBRE_PAIS, DESCRIPCION, FECHA_INICIO_VIGENCIA, FECHA_FIN_VIGENCIA)
+Hibernate: alter table VALE add constraint FK_mpfucpukvdaujfrhcdgm8bp7h foreign key (NOMBRE_CIUDAD, NOMBRE_PAIS, DESCRIPCION, FECHA_INICIO_VIGENCIA, FECHA_FIN_VIGENCIA) references OFERTA (NOMBRE_CIUDAD, NOMBRE_PAIS, DESCRIPCION, FECHA_INICIO_VIGENCIA, FECHA_FIN_VIGENCIA)
+Feb 23, 2015 9:27:51 AM org.hibernate.tool.hbm2ddl.SchemaExport execute
+INFO: HHH000230: Schema export complete
+Hibernate: select categoria_.CATEGORIA_ID from CATEGORIA categoria_ inner join CATEGORIA_GENERAL categoria_1_ on categoria_.CATEGORIA_ID=categoria_1_.CATEGORIA_ID where categoria_.CATEGORIA_ID=?
+Hibernate: select categoria_.CATEGORIA_ID from CATEGORIA categoria_ inner join CATEGORIA_GENERAL categoria_1_ on categoria_.CATEGORIA_ID=categoria_1_.CATEGORIA_ID where categoria_.CATEGORIA_ID=?
+Hibernate: insert into TARJETA_CREDITO (ID_TITULAR, NOMBRE_TITULAR, TIPO_TARJETA, CODIGO_VALIDACION, FECHA_VENCIMIENTO, TARJETA_ID) values (?, ?, ?, ?, ?, ?)
+Hibernate: insert into TARJETA_CREDITO (ID_TITULAR, NOMBRE_TITULAR, TIPO_TARJETA, CODIGO_VALIDACION, FECHA_VENCIMIENTO, TARJETA_ID) values (?, ?, ?, ?, ?, ?)
+Hibernate: insert into CIUDAD (NOMBRE_CIUDAD, NOMBRE_PAIS) values (?, ?)
+Hibernate: insert into CIUDAD (NOMBRE_CIUDAD, NOMBRE_PAIS) values (?, ?)
+Hibernate: insert into CATEGORIA_GENERAL (CATEGORIA_ID) values (?)
+Hibernate: insert into SUBCATEGORIA (categoria_padre, CATEGORIA_ID) values (?, ?)
+Hibernate: insert into CATEGORIA_GENERAL (CATEGORIA_ID) values (?)
+Hibernate: insert into SUBCATEGORIA (categoria_padre, CATEGORIA_ID) values (?, ?)
+Hibernate: insert into CATEGORIA_GENERAL (CATEGORIA_ID) values (?)
+Hibernate: insert into CATEGORIA (CATEGORIA_ID) values (?)
+Hibernate: insert into CATEGORIA_GENERAL (CATEGORIA_ID) values (?)
+Hibernate: insert into CATEGORIA (CATEGORIA_ID) values (?)
+Hibernate: insert into PROMOCION (MONTO_ORIGINAL, MONTO_OFERTA, TIPO, ES_CONTINUO, ID_SUBCATEGORIA, DESCRIPCION, FECHA_INICIO_VIGENCIA, FECHA_FIN_VIGENCIA) values (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into PROMOCION (MONTO_ORIGINAL, MONTO_OFERTA, TIPO, ES_CONTINUO, ID_SUBCATEGORIA, DESCRIPCION, FECHA_INICIO_VIGENCIA, FECHA_FIN_VIGENCIA) values (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into USUARIO (CLAVE, NOMBRE, APELLIDO, CORREO, DINERO_PROMOCION, USUARIO_ID) values (?, ?, ?, ?, ?, ?)
+Hibernate: insert into USUARIO (CLAVE, NOMBRE, APELLIDO, CORREO, DINERO_PROMOCION, USUARIO_ID) values (?, ?, ?, ?, ?, ?)
+Hibernate: insert into COMPRA (COMPRADOR, DESCRIPCION, FECHA_INICIO_VIGENCIA, FECHA_FIN_VIGENCIA) values (?, ?, ?, ?)
+Hibernate: insert into COMPRA (COMPRADOR, DESCRIPCION, FECHA_INICIO_VIGENCIA, FECHA_FIN_VIGENCIA) values (?, ?, ?, ?)
+Hibernate: insert into COMPRA (COMPRADOR, DESCRIPCION, FECHA_INICIO_VIGENCIA, FECHA_FIN_VIGENCIA) values (?, ?, ?, ?)
+Hibernate: insert into OFERTA (NOMBRE_CIUDAD, NOMBRE_PAIS, DESCRIPCION, FECHA_INICIO_VIGENCIA, FECHA_FIN_VIGENCIA) values (?, ?, ?, ?, ?)
+Hibernate: insert into OFERTA (NOMBRE_CIUDAD, NOMBRE_PAIS, DESCRIPCION, FECHA_INICIO_VIGENCIA, FECHA_FIN_VIGENCIA) values (?, ?, ?, ?, ?)
+Hibernate: insert into OFERTA (NOMBRE_CIUDAD, NOMBRE_PAIS, DESCRIPCION, FECHA_INICIO_VIGENCIA, FECHA_FIN_VIGENCIA) values (?, ?, ?, ?, ?)
+Hibernate: insert into VALE (INFO_PROMOCION, CORREO, FECHA_ENVIO, FECHA_COMPRA, TARJETA_ID, COMPRADOR, DESCRIPCION, FECHA_INICIO_VIGENCIA, FECHA_FIN_VIGENCIA, NOMBRE_CIUDAD, NOMBRE_PAIS, DESCRIPCION_OFERTA, FECHA_INICIO_VIGENCIA_OFERTA, FECHA_FIN_VIGENCIA_OFERTA, CODIGO_VALE) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into VALE (INFO_PROMOCION, CORREO, FECHA_ENVIO, FECHA_COMPRA, TARJETA_ID, COMPRADOR, DESCRIPCION, FECHA_INICIO_VIGENCIA, FECHA_FIN_VIGENCIA, NOMBRE_CIUDAD, NOMBRE_PAIS, DESCRIPCION_OFERTA, FECHA_INICIO_VIGENCIA_OFERTA, FECHA_FIN_VIGENCIA_OFERTA, CODIGO_VALE) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into VALE (INFO_PROMOCION, CORREO, FECHA_ENVIO, FECHA_COMPRA, TARJETA_ID, COMPRADOR, DESCRIPCION, FECHA_INICIO_VIGENCIA, FECHA_FIN_VIGENCIA, NOMBRE_CIUDAD, NOMBRE_PAIS, DESCRIPCION_OFERTA, FECHA_INICIO_VIGENCIA_OFERTA, FECHA_FIN_VIGENCIA_OFERTA, CODIGO_VALE) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into VALE (INFO_PROMOCION, CORREO, FECHA_ENVIO, FECHA_COMPRA, TARJETA_ID, COMPRADOR, DESCRIPCION, FECHA_INICIO_VIGENCIA, FECHA_FIN_VIGENCIA, NOMBRE_CIUDAD, NOMBRE_PAIS, DESCRIPCION_OFERTA, FECHA_INICIO_VIGENCIA_OFERTA, FECHA_FIN_VIGENCIA_OFERTA, CODIGO_VALE) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: update SUBCATEGORIA set categoria_padre=? where CATEGORIA_ID=?
+Hibernate: update SUBCATEGORIA set categoria_padre=? where CATEGORIA_ID=?
+Hibernate: update CATEGORIA_GENERAL set ID_PADRE_CAT=? where CATEGORIA_ID=?
+Hibernate: update CATEGORIA_GENERAL set ID_PADRE_CAT=? where CATEGORIA_ID=?
+Hibernate: insert into USUARIO_TARJETA (USUARIO_ID, TARJETA_ID) values (?, ?)
+Hibernate: insert into USUARIO_CIUDAD (USUARIO_ID, NOMBRE_CIUDAD, NOMBRE_PAIS) values (?, ?, ?)
+Hibernate: insert into USUARIO_CIUDAD (USUARIO_ID, NOMBRE_CIUDAD, NOMBRE_PAIS) values (?, ?, ?)
+Hibernate: insert into AMIGOS (AMIGO_ID, USUARIO_ID) values (?, ?)
+Hibernate: insert into AMIGOS (AMIGO_ID, USUARIO_ID) values (?, ?)
+Hibernate: insert into USUARIO_TARJETA (USUARIO_ID, TARJETA_ID) values (?, ?)
+Hibernate: insert into USUARIO_TARJETA (USUARIO_ID, TARJETA_ID) values (?, ?)
+Hibernate: select promocion2_.DESCRIPCION as DESCRIPC1_8_, promocion2_.FECHA_INICIO_VIGENCIA as FECHA_IN2_8_, promocion2_.FECHA_FIN_VIGENCIA as FECHA_FI3_8_, promocion2_.MONTO_ORIGINAL as MONTO_OR4_8_, promocion2_.MONTO_OFERTA as MONTO_OF5_8_, promocion2_.TIPO as TIPO6_8_, promocion2_.ES_CONTINUO as ES_CONTI7_8_, promocion2_.ID_SUBCATEGORIA as ID_SUBCA8_8_ from OFERTA oferta0_ inner join CIUDAD ciudad1_ on oferta0_.NOMBRE_CIUDAD=ciudad1_.NOMBRE_CIUDAD and oferta0_.NOMBRE_PAIS=ciudad1_.NOMBRE_PAIS inner join PROMOCION promocion2_ on oferta0_.DESCRIPCION=promocion2_.DESCRIPCION and oferta0_.FECHA_INICIO_VIGENCIA=promocion2_.FECHA_INICIO_VIGENCIA and oferta0_.FECHA_FIN_VIGENCIA=promocion2_.FECHA_FIN_VIGENCIA where ciudad1_.NOMBRE_CIUDAD=? and ciudad1_.NOMBRE_PAIS=?
+2x1 en Sushi Market
+Hibernate: select promocion2_.DESCRIPCION as DESCRIPC1_8_, promocion2_.FECHA_INICIO_VIGENCIA as FECHA_IN2_8_, promocion2_.FECHA_FIN_VIGENCIA as FECHA_FI3_8_, promocion2_.MONTO_ORIGINAL as MONTO_OR4_8_, promocion2_.MONTO_OFERTA as MONTO_OF5_8_, promocion2_.TIPO as TIPO6_8_, promocion2_.ES_CONTINUO as ES_CONTI7_8_, promocion2_.ID_SUBCATEGORIA as ID_SUBCA8_8_ from COMPRA compra0_ inner join USUARIO usuario1_ on compra0_.COMPRADOR=usuario1_.USUARIO_ID inner join PROMOCION promocion2_ on compra0_.DESCRIPCION=promocion2_.DESCRIPCION and compra0_.FECHA_INICIO_VIGENCIA=promocion2_.FECHA_INICIO_VIGENCIA and compra0_.FECHA_FIN_VIGENCIA=promocion2_.FECHA_FIN_VIGENCIA where usuario1_.USUARIO_ID=?
+2x1 en Sushi Market
+Hibernate: select ciudad0_.NOMBRE_CIUDAD as NOMBRE_C1_3_, ciudad0_.NOMBRE_PAIS as NOMBRE_P2_3_ from CIUDAD ciudad0_ inner join OFERTA promocione1_ on ciudad0_.NOMBRE_CIUDAD=promocione1_.NOMBRE_CIUDAD and ciudad0_.NOMBRE_PAIS=promocione1_.NOMBRE_PAIS order by count(promocione1_.NOMBRE_CIUDAD) desc
+Barcelona,Espana
+

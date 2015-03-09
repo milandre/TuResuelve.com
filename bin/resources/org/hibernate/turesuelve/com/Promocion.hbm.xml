@@ -18,6 +18,7 @@
 		<property name="monto_oferta" column="MONTO_OFERTA" not-null="true" type="float"/>
 		<property name="tipo" column="TIPO" not-null="true"/>
 		<property name="es_continuo" column="ES_CONTINUO" not-null="true" type="boolean"/>
+		<property name="activa" column="ACTIVA" not-null="true" type="boolean"/>
        		
 <!--  		 <set name="ciudades_ofertadas" table="CIUDAD_PROMOCION" inverse="true" lazy="true" fetch="select" cascade="all">
           	<key>
@@ -78,8 +79,42 @@
 	     	    <column name="DESTINATARIO"/>
 	     </many-to-one>
          
-         
- 		 
  	</class>
+ 	
+     <database-object>
+        <create>
+		CREATE TRIGGER revisar_fecha_inicio
+		BEFORE UPDATE ON EMPLOYEE
+		FOR EACH ROW
+		BEGIN
+		   IF :NEW.ACTIVA IS TRUE AND :NEW.FECHA_INICIO_VIGENCIA > CURDATE() THEN
+ 			   SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT 'ERROR NO SE PUEDE ACTIVAR UNA PROMOCION ANTES DE LA FECHA DE INICIO';
+		   ENDIF
+		END; 
+        </create>
+        <drop>
+        	drop trigger revisar_fecha_inicio;
+        </drop>
+        <dialect-scope name="org.hibernate.dialect.MySQLDialect"/>
+     </database-object>
+
+
+     <database-object>
+        <create>
+		CREATE TRIGGER revisar_fecha_fin
+		BEFORE UPDATE ON EMPLOYEE
+		FOR EACH ROW
+		BEGIN
+		   IF :NEW.ACTIVA IS TRUE AND :NEW.FECHA_FIN_VIGENCIA < CURDATE() THEN
+		   	SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT 'ERROR NO SE PUEDE ACTIVAR UNA PROMOCION DESPUES DE LA FECHA FIN';
+		   ENDIF;
+		END;
+        </create>
+        <drop>
+        	drop trigger revisar_fecha_fin;
+        </drop>
+        <dialect-scope name="org.hibernate.dialect.MySQLDialect"/>
+     </database-object>
+
  	
 </hibernate-mapping>
